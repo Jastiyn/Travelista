@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travelista</title>
+    <link rel="stylesheet" href="palawan.css">
+    <link rel="icon" href="pictures/plain logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+</head>
+<body>
+   <div class="header">
+      <div class="logo">
+          <a href="home.html">
+              <img src="pictures/logo.png" class="logoImg" alt="Travelista">
+          </a>
+      </div>
+      <div class="topnav">
+          <ul>
+              <li><a href="home.html">Home</a></li>
+              <li><a href="about.html">About Us</a></li>
+              <li><a href="contact.html">Contact</a></li>
+          </ul>
+      </div>
+   </div>
+   <div class="bottom-nav">
+      <ul>
+         <li><a id="explore" href="explore.html">Explore Top Destination</a></li>
+         <li><a id="airfare" href="airfare.html">Airfare</a></li>
+         <li><a id="hotel" href="hotel.html">Hotels</a></li>
+         <li><a id="transport" href="transport.html">Transportation</a></li>
+         <li><a id="packages" href="packages.html">Packages</a></li>
+     </ul>
+   </div>
+   </div>
+   <section class="slider-container">
+      <div class="slider-images">
+         <div class="slider-img">
+            <img src="pictures/puerto princesa underground river 2.jpg" alt="1" class="thumbnail">
+            <img src="pictures/puerto princesa underground river 2.jpg" alt="1" class="gif" style="opacity:100%">
+            <h1 class="one">PUERTO</h1>
+            <div class="details">
+               <h2>Puerto Princesa Underground River</h2>
+               <p>A UNESCO World Heritage Site featuring a stunning underground river with impressive limestone formations and diverse wildlife.</p>
+            </div>
+         </div>
+         <div class="slider-img">
+            <img src="pictures/tubbataha reefs natural park.jpg" alt="1" class="thumbnail">
+            <img src="pictures/tubbataha reefs natural park 2.jpg" alt="1" class="gif" style="opacity:100%">
+            <h1 class="two">Tubbataha</h1>
+            <div class="details">
+               <h2>Tubbataha Reefs Natural Park</h2>
+               <p>A UNESCO World Heritage Site known for its pristine coral reefs and rich marine biodiversity, ideal for diving.</p>
+            </div>
+         </div>
+         <div class="slider-img">
+            <img src="pictures/coron.jpg" alt="1" class="thumbnail">
+            <img src="pictures/coron 2.jpg" alt="1" class="gif" style="opacity:100%">
+            <h1 class="three"> Coron</h1>
+            <div class="details">
+               <h2> Coron</h2>
+               <p>A destination famous for its breathtaking limestone cliffs, crystal-clear lakes, and world-class WWII shipwreck diving sites.</p>
+            </div>
+         </div>
+         <div class="slider-img">
+            <img src="pictures/el nido.jpg" alt="1" class="thumbnail">
+            <img src="pictures/el nido 2.jpg" alt="1" class="gif" style="opacity:100%">
+            <h1 class="four">ElNido</h1>
+            <div class="details">
+               <h2>El Nido</h2>
+               <p>Renowned for its dramatic limestone cliffs, turquoise lagoons, and vibrant coral reefs, perfect for island-hopping and snorkeling.</p>
+            </div>
+         </div>
+         <div class="slider-img">
+            <img src="pictures/port barton.jpeg" alt="1" class="thumbnail">
+            <img src="pictures/port barton 2.jpg" alt="1" class="gif" style="opacity:100%">
+            <h1 class="five">PORT</h1>
+            <div class="details">
+               <h2>Port Barton</h2>
+               <p>A tranquil coastal village offering laid-back beach vibes, clear waters for snorkeling, and nearby picturesque islands.</p>
+            </div>
+         </div>
+         <div class="slider-img">
+            <img src="pictures/calauit safari park.jpg" alt="1" class="thumbnail">
+            <img src="pictures/calauit safari park 2.jpg" alt="1" class="gif" style="opacity:100%">
+            <h1 class="six">SAFARI</h1>
+            <div class="details">
+               <h2>Calauit Safari Park</h2>
+               <p>A unique wildlife sanctuary with African animals and native species, providing a safari experience in a tropical setting.</p>
+            </div>
+         </div>
+         <div class="slider-img">
+             <img src="pictures/nacpan beach.jpg" alt="1" class="thumbnail">
+             <img src="pictures/nacpan beach 2.jpg" alt="1" class="gif" style="opacity:100%">
+             <h1 class="seven">NACPAN</h1>
+             <div class="details">
+               <h2>Nacpan Beach</h2>
+               <p>A pristine, 4-kilometer stretch of golden sand and clear waters, known for its serene atmosphere and stunning sunsets.</p>
+            </div>
+         </div>
+         <div class="slider-img">
+            <img src="pictures/sabang beach.jpg" alt="1" class="thumbnail">
+            <img src="pictures/sabang beach.jpg" alt="1" class="gif" style="opacity:100%">
+            <h1 class="eight">SABANG</h1>
+            <div class="details">
+               <h2> Sabang Beach</h2>
+               <p>A gateway to the Puerto Princesa Underground River, offering a quiet beach experience with opportunities for swimming and exploring nearby caves.</p>
+            </div>
+         </div>
+      </div>
+   </section>
+   <div class="back-container">
+      <a href="explore.html" class="back">Back</a>
+   </div>
+   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+   <script>
+      $(document).ready(function () {
+         $(".slider-img").on("click", function () {
+         $(".slider-img").removeClass("active");
+         $(this).addClass("active");
+         });
+      });
+   </script>
+      <style>
+         .gif {
+         display: none;
+         }
+         .active .gif {
+         display: block;
+         }
+         .active .thumbnail {
+         display: none;
+         }
+      </style>           
+   <script>
+      window.addEventListener('scroll', function() {
+          const header = document.querySelector('.header');
+          const bottomNav = document.querySelector('.bottom-nav');
+          
+          if (window.scrollY > 0) {
+              header.style.background = 'rgba(36, 92, 136, 1)'; // Change to full opacity
+              bottomNav.style.background = 'rgba(58, 125, 169, 1)'; // Change to full opacity
+          } else {
+              header.style.background = 'rgba(255, 255, 255, 0)'; // Transparent background
+              bottomNav.style.background = 'rgba(128, 200, 188, 0)'; // Transparent background
+          }
+      });
+  </script>
+    
+    
+</body>
+</html>

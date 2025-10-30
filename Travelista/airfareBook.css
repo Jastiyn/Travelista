@@ -1,0 +1,209 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    text-decoration: none;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+}
+.header{
+    background: ghostwhite;
+    padding-right: 235px;
+    padding-left: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 80px;
+    z-index: 1000;
+}
+.topnav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.logoImg{
+    width: 150px;
+    padding: 0%;
+}
+.logo{
+    padding-top: 5px;
+}
+.topnav ul{
+    float: right;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+.topnav li{
+    display: inline-block;
+    list-style: none;
+}
+.topnav li a{
+    font-size: 18px;
+    text-transform: uppercase;
+    padding-left: 50px;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+.topnav li a:hover{
+    color: #ffc800;
+}
+.topnav ul li {
+    display: inline;
+}
+.bottom-nav{
+    font-weight: bold;
+    width: 100%;
+    height: 50px;
+    background: #80c8bc;
+    padding-right: 285px;
+    padding-left: 300px;
+    position: fixed;
+    top: 80px;
+    z-index: 999;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+.bottom-nav ul{
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.bottom-nav ul li a{
+    color: white;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-size: 12px;
+    transition: font-size 0.3s ease, color 0.3s ease;
+}
+.bottom-nav li a:hover{
+    font-size: 13px;
+    color: #ffc800; 
+}
+#airfare{
+    text-decoration: underline 2px;
+    color: #ffc800;
+}
+.container{
+    /* margin-top: 130px; */
+    /* margin-bottom: 100px; */
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    width: 100%;
+    padding-top: 160px;
+    padding-bottom: 291px;
+    background-size: cover;
+    background-position: center;
+    background-image: linear-gradient(rgba(51, 97, 131, 0.7),rgba(41, 66, 84, 0.8)), url(pictures/bg3.jpg);
+}
+.newBox{
+    position: relative;
+    width: 800px;
+    background: #f4f4f4;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); 
+    padding: 25px;
+    border-radius: 10px;
+}
+.newBox h1{
+    color: #333;
+    text-align: center;
+}
+.newBox h3{
+    color: #333;
+    margin-top: 20px;
+}
+.newBox form{
+    margin-top: 30px;
+}
+.form .inputBox{
+    width: 100%;
+    margin-top: 20px;
+}
+.inputBox label{
+    color: #333;
+}
+.form .inputBox input{
+    position: relative;
+    height: 50px;
+    width: 100%;
+    outline: none;
+    margin-top: 8px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    padding: 0 15px;
+}
+.form .column{
+    display: flex;
+    column-gap: 15px;
+}
+.form button{
+    height: 55px;
+    width: 100%;
+    color: black;
+    font-size: 1rem;
+    border: none;
+    margin-top: 30px;
+    cursor: pointer;
+    border-radius: 6px;
+    font-weight: bold;
+    background-color: #ffc800;
+}
+.form small{
+    font-size: 10px;
+    color: #888;
+    padding-left: 5px;
+}
+.form button:hover{
+    background-color: #ebb800;
+}
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4);
+}
+.modal-content {
+    border-radius: 10px;
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 600px;
+    text-align: center;
+}
+.close-button {
+    color: black;
+    margin-top: 15px;
+    background-color: #ffc800; 
+    border: none;
+    border-radius: 10px;
+    padding: 5px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.close-button:hover,
+.close-button:focus {
+    background-color: #ebb800;
+    text-decoration: underline;
+}
+.header, .bottom-nav {
+    background: rgba(255, 255, 255, 0);
+    transition: background 0.3s ease;
+}

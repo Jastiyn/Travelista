@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travelista</title>
+    <link rel="stylesheet" href="airfare.css">
+    <link rel="icon" href="pictures/plain logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+</head>
+<body>
+    <div class="header">
+        <div class="logo">
+            <a href="home.html">
+                <img src="pictures/logo.png" class="logoImg" alt="Travelista">
+            </a>
+        </div>
+        <div class="topnav">
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="bottom-nav">
+        <ul>
+            <li><a id="explore" href="explore.html">Explore Top Destination</a></li>
+            <li><a id="airfare" href="airfare.html">Airfare</a></li>
+            <li><a id="hotel" href="hotel.html">Hotels</a></li>
+            <li><a id="transport" href="transport.html">Transportation</a></li>
+            <li><a id="packages" href="packages.html">Packages</a></li>
+        </ul>
+    </div>
+    
+    <div class="container">
+        <!-- To Edit -->
+        <div class = "card" id = "card1">
+            <img src="pictures/Boracay.jpg" alt="Boracay Island">
+            <div class="contents">
+                <h2>Boracay Island</h2>
+                <p>For as low as</p>
+                <h1>₱1,000</h1>
+                <a href="airfareBook.html?destination=Boracay%20Island" class="btn">Book Now!</a>
+                <!-- Change lang yung after ng destination pero wag tatangalin yung %20 sa lahat ng href dito-->
+            </div>
+        </div>
+        <div class = "card" id = "card2">
+            <img src="pictures/chocohills.jpg" alt="Bohol">
+            <div class="contents">
+                <h2>Bohol</h2>
+                <p>For as low as</p>
+                <h1>₱1,000</h1>
+                <a href="airfareBook.html?destination=Bohol%20" class="btn">Book Now!</a>
+            </div>
+        </div>
+        <div class = "card" id = "card3">
+            <img src="pictures/palawan.jpg" alt="Palawan">
+            <div class="contents">
+                <h2>Palawan</h2>
+                <p>For as low as</p>
+                <h1>₱1,000</h1>
+                <a href="airfareBook.html?destination=Palawan%20" class="btn">Book Now!</a>
+            </div>
+        </div>
+        <div class = "card" id = "card4">
+            <img src="pictures/banauerice.jpg" alt="Ifugao">
+            <div class="contents">
+                <h2>Ifugao</h2>
+                <p>For as low as</p>
+                <h1>₱1,000</h1>
+                <a href="airfareBook.html?destination=Ifugao%20" class="btn">Book Now!</a>
+            </div>
+        </div>
+        <div class = "card" id = "card5">
+            <img src="pictures/mayon.JPG" alt="Albay">
+            <div class="contents">
+                <h2>Albay</h2>
+                <p>For as low as</p>
+                <h1>₱1,000</h1>
+                <a href="airfareBook.html?destination=Albay%20" class="btn">Book Now!</a>
+            </div>
+        </div>
+        <div class = "card" id = "card7">
+            <img src="pictures/siargao.jpg" alt="Siargao Island">
+            <div class="contents">
+                <h2>Siargao Island</h2>
+                <p>For as low as</p>
+                <h1>₱1,000</h1>
+                <a href="airfareBook.html?destination=Siargao%20Island" class="btn">Book Now!</a>
+            </div>
+        </div>
+    
+        
+    </div>
+    <script>
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('.header');
+            const bottomNav = document.querySelector('.bottom-nav');
+            
+            if (window.scrollY > 0) {
+                header.style.background = 'rgba(36, 92, 136, 1)'; // Change to full opacity
+                bottomNav.style.background = 'rgba(58, 125, 169, 1)'; // Change to full opacity
+            } else {
+                header.style.background = 'rgba(255, 255, 255, 0)'; // Transparent background
+                bottomNav.style.background = 'rgba(128, 200, 188, 0)'; // Transparent background
+            }
+        });
+        document.addEventListener("DOMContentLoaded", function() {
+        // Function to get URL parameters
+        function getUrlParameter(name) {
+            name = name.replace(/[\[]/, '\\[').replace(/[\]]/, '\\]');
+            var regex = new RegExp('[\\?&]' + name + '=([^&#]*)');
+            var results = regex.exec(location.search);
+            return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
+        }
+        // Retrieve the destination from the URL
+        var destination = getUrlParameter('destination');
+        // Set the value of the Destination input field in airfarebook.html
+        document.getElementById('Destination').value = destination;
+    });
+    </script>
+</body>
+</html>

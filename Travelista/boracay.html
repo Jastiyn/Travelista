@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travelista</title>
+    <link rel="stylesheet" href="boracay.css">
+    <link rel="icon" href="pictures/plain logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+</head>
+<body>
+   <div class="header">
+      <div class="logo">
+          <a href="home.html">
+              <img src="pictures/logo.png" class="logoImg" alt="Travelista">
+          </a>
+      </div>
+      <div class="topnav">
+          <ul>
+              <li><a href="home.html">Home</a></li>
+              <li><a href="about.html">About Us</a></li>
+              <li><a href="contact.html">Contact</a></li>
+          </ul>
+      </div>
+   </div>
+   <div class="bottom-nav">
+      <ul>
+         <li><a id="explore" href="explore.html">Explore Top Destination</a></li>
+         <li><a id="airfare" href="airfare.html">Airfare</a></li>
+         <li><a id="hotel" href="hotel.html">Hotels</a></li>
+         <li><a id="transport" href="transport.html">Transportation</a></li>
+         <li><a id="packages" href="packages.html">Packages</a></li>
+     </ul>
+   </div>
+   </div>
+   <section class="slider-container">
+      <div class="slider-images">
+         <div class="slider-img">
+            <img src="pictures/Willy's Rock.jpg" alt="1" class="thumbnail">
+            <img src="pictures/Willy's Rock.jpg" alt="1" class="gif" style="opacity:100%">
+            <h1 class="one">ROCK</h1>
+            <div class="details">
+               <h2>WILLY'S ROCK</h2>
+               <p>Iconic rock with a Virgin Mary shrine, popular for sightseeing and photos.</p>
+            </div>
+         </div>
+         <div class="slider-img">
+            <img src="pictures/White beach.jpg" alt="1" class="thumbnail">
+            <img src="pictures/White beach 2.jpg" alt="1" class="gif" style="opacity:100%">
+            <h1 class="two">WHITE</h1>
+            <div class="details">
+               <h2>WHITE BEACH</h2>
+               <p>Boracay’s famous, lively 4-km beach with powdery sand and vibrant nightlife.</p>
+            </div>
+         </div>
+         <div class="slider-img">
+            <img src="pictures/Puka shell beach.jpg" alt="1" class="thumbnail">
+            <img src="pictures/Puka shell beach 2.jpg" alt="1" class="gif" style="opacity:100%">
+            <h1 class="three">PUKA</h1>
+            <div class="details">
+               <h2>PUKA SHELL BEACH</h2>
+               <p>A tranquil Boracay beach known for its natural white sand mixed with puka shells.</p>
+            </div>
+         </div>
+         <div class="slider-img">
+            <img src="pictures/Ariel's point.jpg" alt="1" class="thumbnail">
+            <img src="pictures/Ariel's Point 2.jpg" alt="1" class="gif" style="opacity:100%">
+            <h1 class="four">ARIEL'S</h1>
+            <div class="details">
+               <h2>ARIEL'S POINT</h2>
+               <p>Adventure spot near Boracay offering cliff diving, kayaking, and snorkeling.</p>
+            </div>
+         </div>
+         <div class="slider-img">
+            <img src="pictures/Crystal cove island.jpg" alt="1" class="thumbnail">
+            <img src="pictures/Crystal cove island 2.jpg" alt="1" class="gif" style="opacity:100%">
+            <h1 class="five">COVE</h1>
+            <div class="details">
+               <h2>CRYSTAL COVE ISLAND</h2>
+               <p>A scenic island near Boracay with clear waters, caves, and snorkeling spots.</p>
+            </div>
+         </div>
+         <div class="slider-img">
+            <img src="pictures/ilig-iligan beach.jpg" alt="1" class="thumbnail">
+            <img src="pictures/ilig-iligan beach.jpg" alt="1" class="gif" style="opacity:100%">
+            <h1 class="six">ILIG</h1>
+            <div class="details">
+               <h2>ILIG-ILIGAN BEACH</h2>
+               <p>Secluded beach on Boracay’s northeast, ideal for snorkeling and cave exploration.</p>
+            </div>
+         </div>
+         <div class="slider-img">
+             <img src="pictures/bulabog beach.jpg" alt="1" class="thumbnail">
+             <img src="pictures/bulabog beach.jpg" alt="1" class="gif" style="opacity:100%">
+             <h1 class="seven">BULABOG</h1>
+             <div class="details">
+               <h2>BULABOG BEACH</h2>
+               <p>Eastern Boracay beach known for kiteboarding, windsurfing, and a relaxed vibe.</p>
+            </div>
+         </div>
+         <div class="slider-img">
+            <img src="pictures/Diniwid beach.jpg" alt="1" class="thumbnail">
+            <img src="pictures/Diniwid beach.jpg" alt="1" class="gif" style="opacity:100%">
+            <h1 class="eight">DINIWID</h1>
+            <div class="details">
+               <h2>DINIWID BEACH</h2>
+               <p>Small, quiet beach north of White Beach, perfect for swimming and sunsets.</p>
+            </div>
+         </div>
+      </div>
+   </section>
+   <div class="back-container">
+      <a href="explore.html" class="back">Back</a>
+   </div>
+   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+   <script>
+      $(document).ready(function () {
+         $(".slider-img").on("click", function () {
+         $(".slider-img").removeClass("active");
+         $(this).addClass("active");
+         });
+      });
+   </script>
+      <style>
+         .gif {
+         display: none;
+         }
+         .active .gif {
+         display: block;
+         }
+         .active .thumbnail {
+         display: none;
+         }
+      </style>           
+   <script>
+      window.addEventListener('scroll', function() {
+          const header = document.querySelector('.header');
+          const bottomNav = document.querySelector('.bottom-nav');
+          
+          if (window.scrollY > 0) {
+              header.style.background = 'rgba(36, 92, 136, 1)'; // Change to full opacity
+              bottomNav.style.background = 'rgba(58, 125, 169, 1)'; // Change to full opacity
+          } else {
+              header.style.background = 'rgba(255, 255, 255, 0)'; // Transparent background
+              bottomNav.style.background = 'rgba(128, 200, 188, 0)'; // Transparent background
+          }
+      });
+  </script>
+    
+    
+</body>
+</html>

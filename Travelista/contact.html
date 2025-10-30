@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travelista</title>
+    <link rel="stylesheet" href="contact.css">
+    <link rel="icon" href="pictures/plain logo.png" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <div class="header">
+        <div class="logo">
+            <a href="home.html">
+                <img src="pictures/logo.png" class="logoImg" alt="Travelista">
+            </a>
+        </div>
+        <div class="topnav">
+            <ul>
+                <li><a id="home" href="home.html">Home</a></li>
+                <li><a id="about" href="about.html">About Us</a></li>
+                <li><a id="contact" href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="bottom-nav">
+        <ul>
+            <li><a href="explore.html">Explore Top Destination</a></li>
+            <li><a href="airfare.html">Airfare</a></li>
+            <li><a href="hotel.html">Hotels</a></li>
+            <li><a href="transport.html">Transportation</a></li>
+            <li><a href="packages.html">Packages</a></li>
+        </ul>
+    </div>
+    
+    <div class="container">
+        <div class="contentBox">
+            <div class="contentLeft">
+                <h1>
+                    Send a Request!
+                </h1>
+                    <form class="form">
+                        <div class="inputRow">
+                            <div class="inputGroup">
+                                <div class="inputRow">
+                                    <label >Name</label>
+                                    <input type="text" id="Name"
+                                    placeholder="Enter Your Name">
+                                </div>
+                                <div class="inputRow">
+                                    <label >Phone</label>
+                                    <input type="text" id="Phone"
+                                    placeholder="Enter Your Number">
+                                </div>
+                            </div>
+                            <div class="inputGroup">
+                                <div class="inputRow">
+                                    <label >Email</label>
+                                    <input type="email" id="Address"
+                                    placeholder="Enter Your Email">
+                                </div>
+                                <div class="inputRow">
+                                    <label >Feedback</label>
+                                    <textarea rows="2" id="Feedback"
+                                    placeholder="Send us a feedback!"></textarea>
+                                </div>
+                            </div>
+                        </div>
+
+                        <button type="submit">Submit</button>
+                    </form>
+        
+            </div>
+            
+            <div class="contentRight">
+                <h1>
+                    Reach Us!
+                </h1>
+                <div class = "details">
+                    <h3>Mail</h3>
+                    <p>travelista@gmail.com</p>
+                    <h3>Location</h3>
+                    <p>143 St. Manila Philippines</p>
+                    <h3>Phone</h3>
+                    <p>09123456789</p>
+                </div>
+                <hr>
+                <div class = "icons">
+                    <a href="#" class="fa fa-facebook"></a>
+                    <a href="#" class="fa fa-instagram"></a></span></a>
+                    <a href="#" class="fa fa-twitter"></a>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    <div id="bookingModal" class="modal">
+        <div class="modal-content">
+            <p id="bookingDetails"></p>
+            <button id="closeModalButton" class="close-button">Close</button>
+        </div>
+    </div>
+    <script>
+        document.querySelector('.form').addEventListener('submit', function(event) {
+                event.preventDefault();
+
+                const Name = document.getElementById('Name').value;
+                const Phone = document.getElementById('Phone').value;
+                const Address = document.getElementById('Address').value;
+                const Feedback = document.getElementById('Feedback').value;
+                
+                if (Name && Phone && Address && Feedback) {
+                    const bookingDetails = `Thank you for Sending us your Request, ${Name}!`;
+                    
+                    document.getElementById('bookingDetails').innerHTML = bookingDetails;
+                    document.getElementById('bookingModal').style.display = 'block';
+                } else {
+                    alert('Please fill in all the required fields.');
+                }
+            });    
+
+            const modal = document.getElementById('bookingModal');
+            const closeModalButton = document.getElementById('closeModalButton');
+
+            closeModalButton.onclick = function() {
+                modal.style.display = 'none';
+                window.location.href = 'contact.html';
+            }
+            window.onclick = function(event) {
+                if (event.target == modal) {
+                    modal.style.display = 'none';
+                    window.location.href = 'contact.html';
+                }
+            }
+    </script>
+</body>
+</html>

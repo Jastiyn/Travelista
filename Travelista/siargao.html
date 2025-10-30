@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travelista</title>
+    <link rel="stylesheet" href="siargao.css">
+    <link rel="icon" href="pictures/plain logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+</head>
+<body>
+   <div class="header">
+      <div class="logo">
+          <a href="home.html">
+              <img src="pictures/logo.png" class="logoImg" alt="Travelista">
+          </a>
+      </div>
+      <div class="topnav">
+          <ul>
+              <li><a href="home.html">Home</a></li>
+              <li><a href="about.html">About Us</a></li>
+              <li><a href="contact.html">Contact</a></li>
+          </ul>
+      </div>
+   </div>
+   <div class="bottom-nav">
+      <ul>
+         <li><a id="explore" href="explore.html">Explore Top Destination</a></li>
+         <li><a id="airfare" href="airfare.html">Airfare</a></li>
+         <li><a id="hotel" href="hotel.html">Hotels</a></li>
+         <li><a id="transport" href="transport.html">Transportation</a></li>
+         <li><a id="packages" href="packages.html">Packages</a></li>
+     </ul>
+   </div>
+   </div>
+   <section class="slider-container">
+      <div class="slider-images">
+         <div class="slider-img">
+            <img src="pictures/magpupungko rock pools.jpg" alt="1" class="thumbnail">
+            <img src="pictures/magpupungko rock pools 2.jpg" alt="1" class="gif" style="opacity:100%">
+            <h1 class="one">Magpupungko</h1>
+            <div class="details">
+               <h2>Magpupungko rock pools</h2>
+               <p>Natural tidal pools and rock formations that appear during low tide, perfect for swimming and exploring.</p>
+            </div>
+         </div>
+         <div class="slider-img">
+            <img src="pictures/cloud 9.jpg" alt="1" class="thumbnail">
+            <img src="pictures/cloud 9 2.jpg" alt="1" class="gif" style="opacity:100%">
+            <h1 class="two">Cloud9</h1>
+            <div class="details">
+               <h2>Cloud 9</h2>
+               <p>A famous surf break known for its powerful waves, drawing surfers from around the world and hosting international surfing competitions.</p>
+            </div>
+         </div>
+         <div class="slider-img">
+            <img src="pictures/naked island.jpg" alt="1" class="thumbnail">
+            <img src="pictures/naked island 2.jpg" alt="1" class="gif" style="opacity:100%">
+            <h1 class="three">island</h1>
+            <div class="details">
+               <h2>Naked island</h2>
+               <p>A small, white sandbar with no vegetation, offering crystal-clear waters and a perfect spot for swimming and sunbathing.</p>
+            </div>
+         </div>
+         <div class="slider-img">
+            <img src="pictures/tayangban cave pool.jpg" alt="1" class="thumbnail">
+            <img src="pictures/tayangban cave pool 2.jpg" alt="1" class="gif" style="opacity:100%">
+            <h1 class="four">cave</h1>
+            <div class="details">
+               <h2>Tayangban cave pool</h2>
+               <p>A hidden gem featuring a cave with a natural pool inside, ideal for adventurous swimming and spelunking.</p>
+            </div>
+         </div>
+         <div class="slider-img">
+            <img src="pictures/maasin river.jpg" alt="1" class="thumbnail">
+            <img src="pictures/maasin river 2.jpg" alt="1" class="gif" style="opacity:100%">
+            <h1 class="five">river</h1>
+            <div class="details">
+               <h2>Maasin river</h2>
+               <p>Known for its picturesque setting, this river is popular for its iconic bent palm tree and rope swing, perfect for a fun jungle adventure.</p>
+            </div>
+         </div>
+         <div class="slider-img">
+            <img src="pictures/alegria beach.jpg" alt="1" class="thumbnail">
+            <img src="pictures/alegria beach.jpg" alt="1" class="gif" style="opacity:100%">
+            <h1 class="six">Alegria</h1>
+            <div class="details">
+               <h2>Alegria beach</h2>
+               <p>A tranquil and less crowded beach with powdery white sand and clear turquoise waters, ideal for relaxation and beachcombing.</p>
+            </div>
+         </div>
+         <div class="slider-img">
+             <img src="pictures/sugba lagoon 2.jpg" alt="1" class="thumbnail">
+             <img src="pictures/sugba lagoon 2.jpg" alt="1" class="gif" style="opacity:100%">
+             <h1 class="seven">lagoon</h1>
+             <div class="details">
+               <h2>Sugban lagoon</h2>
+               <p>A serene lagoon surrounded by lush mangroves, offering activities like paddleboarding, kayaking, and swimming.</p>
+            </div>
+         </div>
+         <div class="slider-img">
+            <img src="pictures/guyam island.jpg" alt="1" class="thumbnail">
+            <img src="pictures/guyam island.jpg" alt="1" class="gif" style="opacity:100%">
+            <h1 class="eight">island</h1>
+            <div class="details">
+               <h2>Guyam island</h2>
+               <p>A small, picturesque island with a mix of sandy beaches and rocky shores, perfect for picnics, snorkeling, and relaxation.</p>
+            </div>
+         </div>
+      </div>
+   </section>
+   <div class="back-container">
+      <a href="explore.html" class="back">Back</a>
+   </div>
+   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+   <script>
+      $(document).ready(function () {
+         $(".slider-img").on("click", function () {
+         $(".slider-img").removeClass("active");
+         $(this).addClass("active");
+         });
+      });
+   </script>
+      <style>
+         .gif {
+         display: none;
+         }
+         .active .gif {
+         display: block;
+         }
+         .active .thumbnail {
+         display: none;
+         }
+      </style>           
+   <script>
+      window.addEventListener('scroll', function() {
+          const header = document.querySelector('.header');
+          const bottomNav = document.querySelector('.bottom-nav');
+          
+          if (window.scrollY > 0) {
+              header.style.background = 'rgba(36, 92, 136, 1)'; // Change to full opacity
+              bottomNav.style.background = 'rgba(58, 125, 169, 1)'; // Change to full opacity
+          } else {
+              header.style.background = 'rgba(255, 255, 255, 0)'; // Transparent background
+              bottomNav.style.background = 'rgba(128, 200, 188, 0)'; // Transparent background
+          }
+      });
+  </script>
+    
+    
+</body>
+</html>

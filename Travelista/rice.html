@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travelista</title>
+    <link rel="stylesheet" href="rice.css">
+    <link rel="icon" href="pictures/plain logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+</head>
+<body>
+   <div class="header">
+      <div class="logo">
+          <a href="home.html">
+              <img src="pictures/logo.png" class="logoImg" alt="Travelista">
+          </a>
+      </div>
+      <div class="topnav">
+          <ul>
+              <li><a href="home.html">Home</a></li>
+              <li><a href="about.html">About Us</a></li>
+              <li><a href="contact.html">Contact</a></li>
+          </ul>
+      </div>
+   </div>
+   <div class="bottom-nav">
+      <ul>
+         <li><a id="explore" href="explore.html">Explore Top Destination</a></li>
+         <li><a id="airfare" href="airfare.html">Airfare</a></li>
+         <li><a id="hotel" href="hotel.html">Hotels</a></li>
+         <li><a id="transport" href="transport.html">Transportation</a></li>
+         <li><a id="packages" href="packages.html">Packages</a></li>
+     </ul>
+   </div>
+   </div>
+   <section class="slider-container">
+      <div class="slider-images">
+         <div class="slider-img">
+            <img src="pictures/banaue rice terraces.jpg" alt="1" class="thumbnail">
+            <img src="pictures/banaue rice terraces.jpg" alt="1" class="gif" style="opacity:100%">
+            <h1 class="one">BANAUE</h1>
+            <div class="details">
+               <h2>Banaue rice terraces</h2>
+               <p>Ancient, UNESCO-listed terraces carved into the mountains by the Ifugao people, often referred to as the "Eighth Wonder of the World."</p>
+            </div>
+         </div>
+         <div class="slider-img">
+            <img src="pictures/Tappiya falls.jpg" alt="1" class="thumbnail">
+            <img src="pictures/Tappiya falls 2.jpg" alt="1" class="gif" style="opacity:100%">
+            <h1 class="two">FALLS</h1>
+            <div class="details">
+               <h2>Tappiya falls</h2>
+               <p>A majestic waterfall near the Banaue Rice Terraces, offering a refreshing swim and picturesque views.</p>
+            </div>
+         </div>
+         <div class="slider-img">
+            <img src="pictures/mt amuyao.jpg" alt="1" class="thumbnail">
+            <img src="pictures/mt amuyao.jpg" alt="1" class="gif" style="opacity:100%">
+            <h1 class="three">MOUNT</h1>
+            <div class="details">
+               <h2>Mt. Amuyao</h2>
+               <p>One of the highest peaks in Luzon, popular for its challenging hikes and panoramic views of the surrounding mountains and valleys.</p>
+            </div>
+         </div>
+         <div class="slider-img">
+            <img src="pictures/tam-an village.jpg" alt="1" class="thumbnail">
+            <img src="pictures/tam-an village 2.jpg" alt="1" class="gif" style="opacity:100%">
+            <h1 class="four">TAMAN</h1>
+            <div class="details">
+               <h2>Tam-an village</h2>
+               <p>A traditional Ifugao village where visitors can experience the local culture, crafts, and way of life.</p>
+            </div>
+         </div>
+         <div class="slider-img">
+            <img src="pictures/banaue musuem.jpg" alt="1" class="thumbnail">
+            <img src="pictures/banaue musuem 2.jpg" alt="1" class="gif" style="opacity:100%">
+            <h1 class="five">MUSEUM</h1>
+            <div class="details">
+               <h2>Banaue museum</h2>
+               <p>A repository of Ifugao history, artifacts, and cultural exhibits, providing insight into the region's rich heritage.</p>
+            </div>
+         </div>
+         <div class="slider-img">
+            <img src="pictures/guihob natural pool.jpg" alt="1" class="thumbnail">
+            <img src="pictures/guihob natural pool 2.jpg" alt="1" class="gif" style="opacity:100%">
+            <h1 class="six">GUIHOB</h1>
+            <div class="details">
+               <h2>Guihob natural pool</h2>
+               <p>A serene natural pool fed by cool mountain springs, perfect for relaxation and a refreshing dip.</p>
+            </div>
+         </div>
+         <div class="slider-img">
+             <img src="pictures/bogyah hot spring.jpg" alt="1" class="thumbnail">
+             <img src="pictures/bogyah hot spring 2.jpg" alt="1" class="gif" style="opacity:100%">
+             <h1 class="seven">BOGYAH</h1>
+             <div class="details">
+               <h2>Bogyah hot spring</h2>
+               <p>A natural hot spring ideal for soaking and unwinding, surrounded by lush greenery.</p>
+            </div>
+         </div>
+         <div class="slider-img">
+            <img src="pictures/balangagan cave.jpg" alt="1" class="thumbnail">
+            <img src="pictures/balangagan cave 2.jpg" alt="1" class="gif" style="opacity:100%">
+            <h1 class="eight">CAVE</h1>
+            <div class="details">
+               <h2>Balangagan cave</h2>
+               <p>An intriguing cave system with impressive rock formations, stalactites, and stalagmites, offering adventurous spelunking experiences.</p>
+            </div>
+         </div>
+      </div>
+   </section>
+   <div class="back-container">
+      <a href="explore.html" class="back">Back</a>
+   </div>
+   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+   <script>
+      $(document).ready(function () {
+         $(".slider-img").on("click", function () {
+         $(".slider-img").removeClass("active");
+         $(this).addClass("active");
+         });
+      });
+   </script>
+      <style>
+         .gif {
+         display: none;
+         }
+         .active .gif {
+         display: block;
+         }
+         .active .thumbnail {
+         display: none;
+         }
+      </style>           
+   <script>
+      window.addEventListener('scroll', function() {
+          const header = document.querySelector('.header');
+          const bottomNav = document.querySelector('.bottom-nav');
+          
+          if (window.scrollY > 0) {
+              header.style.background = 'rgba(36, 92, 136, 1)'; // Change to full opacity
+              bottomNav.style.background = 'rgba(58, 125, 169, 1)'; // Change to full opacity
+          } else {
+              header.style.background = 'rgba(255, 255, 255, 0)'; // Transparent background
+              bottomNav.style.background = 'rgba(128, 200, 188, 0)'; // Transparent background
+          }
+      });
+  </script>
+    
+    
+</body>
+</html>

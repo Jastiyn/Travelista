@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travelista</title>
+    <link rel="stylesheet" href="mayon.css">
+    <link rel="icon" href="pictures/plain logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+</head>
+<body>
+   <div class="header">
+      <div class="logo">
+          <a href="home.html">
+              <img src="pictures/logo.png" class="logoImg" alt="Travelista">
+          </a>
+      </div>
+      <div class="topnav">
+          <ul>
+              <li><a href="home.html">Home</a></li>
+              <li><a href="about.html">About Us</a></li>
+              <li><a href="contact.html">Contact</a></li>
+          </ul>
+      </div>
+   </div>
+   <div class="bottom-nav">
+      <ul>
+         <li><a id="explore" href="explore.html">Explore Top Destination</a></li>
+         <li><a id="airfare" href="airfare.html">Airfare</a></li>
+         <li><a id="hotel" href="hotel.html">Hotels</a></li>
+         <li><a id="transport" href="transport.html">Transportation</a></li>
+         <li><a id="packages" href="packages.html">Packages</a></li>
+     </ul>
+   </div>
+   </div>
+   <section class="slider-container">
+      <div class="slider-images">
+         <div class="slider-img">
+            <img src="pictures/mayon volcano.jpg" alt="1" class="thumbnail">
+            <img src="pictures/mayon volcano 2.jpg" alt="1" class="gif" style="opacity:100%">
+            <h1 class="one">MAYON</h1>
+            <div class="details">
+               <h2>Mayon volcano</h2>
+               <p>Description Dito!</p>
+            </div>
+         </div>
+         <div class="slider-img">
+            <img src="pictures/lignon hill nature park 2.jpg" alt="1" class="thumbnail">
+            <img src="pictures/lignon hill nature park.jpg" alt="1" class="gif" style="opacity:100%">
+            <h1 class="two">PARK</h1>
+            <div class="details">
+               <h2>Lignon hill nature park</h2>
+               <p>Description Dito!</p>
+            </div>
+         </div>
+         <div class="slider-img">
+            <img src="pictures/hoyop-hoyopan cave.jpg" alt="1" class="thumbnail">
+            <img src="pictures/hoyop-hoyopan cave 2.jpg" alt="1" class="gif" style="opacity:100%">
+            <h1 class="three">CAVE</h1>
+            <div class="details">
+               <h2>Hoyop-hoyop cave</h2>
+               <p>Description Dito!</p>
+            </div>
+         </div>
+         <div class="slider-img">
+            <img src="pictures/embarcadero de legazpi.png" alt="1" class="thumbnail">
+            <img src="pictures/embarcadero de legazpi 2.jpg" alt="1" class="gif" style="opacity:100%">
+            <h1 class="four">Embarcadero</h1>
+            <div class="details">
+               <h2>Embarcadero de legazpi</h2>
+               <p>Description Dito!</p>
+            </div>
+         </div>
+         <div class="slider-img">
+            <img src="pictures/sumlang lake.jpg" alt="1" class="thumbnail">
+            <img src="pictures/sumlang lake 2.jpg" alt="1" class="gif" style="opacity:100%">
+            <h1 class="five">LAKE</h1>
+            <div class="details">
+               <h2>Sumlang lake</h2>
+               <p>Description Dito!</p>
+            </div>
+         </div>
+         <div class="slider-img">
+            <img src="pictures/cagsawa ruin park.jpg" alt="1" class="thumbnail">
+            <img src="pictures/cagsawa ruin park 2.jpg" alt="1" class="gif" style="opacity:100%">
+            <h1 class="six">Cagsawa</h1>
+            <div class="details">
+               <h2>Cagsawa ruin park</h2>
+               <p>Description Dito!</p>
+            </div>
+         </div>
+         <div class="slider-img">
+             <img src="pictures/lignon hill nature park (1).jpg" alt="1" class="thumbnail">
+             <img src="pictures/lignon hill nature park 2 (1).jpg" alt="1" class="gif" style="opacity:100%">
+             <h1 class="seven">HILL</h1>
+             <div class="details">
+               <h2>Lignon hill zipline</h2>
+               <p>Description Dito!</p>
+            </div>
+         </div>
+         <div class="slider-img">
+            <img src="pictures/sto domingo church.jpg" alt="1" class="thumbnail">
+            <img src="pictures/sto domingo church 2.jpg" alt="1" class="gif" style="opacity:100%">
+            <h1 class="eight">CHURCH</h1>
+            <div class="details">
+               <h2> Sto. Domingo church</h2>
+               <p>Description Dito!</p>
+            </div>
+         </div>
+      </div>
+   </section>
+   <div class="back-container">
+      <a href="explore.html" class="back">Back</a>
+   </div>
+   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+   <script>
+      $(document).ready(function () {
+         $(".slider-img").on("click", function () {
+         $(".slider-img").removeClass("active");
+         $(this).addClass("active");
+         });
+      });
+   </script>
+      <style>
+         .gif {
+         display: none;
+         }
+         .active .gif {
+         display: block;
+         }
+         .active .thumbnail {
+         display: none;
+         }
+      </style>           
+   <script>
+      window.addEventListener('scroll', function() {
+          const header = document.querySelector('.header');
+          const bottomNav = document.querySelector('.bottom-nav');
+          
+          if (window.scrollY > 0) {
+              header.style.background = 'rgba(36, 92, 136, 1)'; // Change to full opacity
+              bottomNav.style.background = 'rgba(58, 125, 169, 1)'; // Change to full opacity
+          } else {
+              header.style.background = 'rgba(255, 255, 255, 0)'; // Transparent background
+              bottomNav.style.background = 'rgba(128, 200, 188, 0)'; // Transparent background
+          }
+      });
+  </script>
+    
+    
+</body>
+</html>

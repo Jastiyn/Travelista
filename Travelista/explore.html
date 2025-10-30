@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travelista</title>
+    <link rel="stylesheet" href="explore.css">
+    <link rel="icon" href="pictures/plain logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+</head>
+<body>
+   <div class="header">
+      <div class="logo">
+          <a href="home.html">
+              <img src="pictures/logo.png" class="logoImg" alt="Travelista">
+          </a>
+      </div>
+      <div class="topnav">
+          <ul>
+              <li><a href="home.html">Home</a></li>
+              <li><a href="about.html">About Us</a></li>
+              <li><a href="contact.html">Contact</a></li>
+          </ul>
+      </div>
+   </div>
+   <div class="bottom-nav">
+      <ul>
+         <li><a id="explore" href="explore.html">Explore Top Destination</a></li>
+         <li><a id="airfare" href="airfare.html">Airfare</a></li>
+         <li><a id="hotel" href="hotel.html">Hotels</a></li>
+         <li><a id="transport" href="transport.html">Transportation</a></li>
+         <li><a id="packages" href="packages.html">Packages</a></li>
+     </ul>
+   </div>
+   </div>
+
+   <div class="container">             
+      <div class="card" id="card1">
+         <img src="pictures/Boracay.jpg" alt="Boracay Island">
+         <div class="contents">
+            <h3>Boracay Island</h3>
+         </div>
+         <div class="hidden-content">
+            <h3>Boracay Island</h3>
+            <p>Boracay is a resort island in the Western Visayas region of the Philippines, located 0.8 kilometers off the northwest coast of Panay Island.</p>
+            <a href="boracay.html" class="btn" id="boracay">Read More</a>
+         </div>
+      </div>
+      <div class="card" id="card2">
+         <img src="pictures/chocohills.jpg" alt="Bohol">
+         <div class="contents">
+            <h3>Bohol</h3>
+         </div>
+         <div class="hidden-content">
+            <h3>Bohol</h3>
+            <p>Set in the island of Bohol in the Philippines, the Chocolate Hills have become an iconic tourist attraction. Here's what to see and do when you visit.</p>
+            <a href="chocolate.html" class="btn" id="chocolate">Read More</a>
+         </div>
+      </div>
+      <div class="card" id="card3">
+         <img src="pictures/palawan.jpg" alt="Palawan">
+         <div class="contents">
+            <h3>Palawan</h3>
+         </div>
+         <div class="hidden-content">
+            <h3>Palawan</h3>
+            <p> El Nido and Coron are known for their dramatic limestone cliffs, hidden lagoons, and crystal-clear waters. Coron also features famous World War II shipwreck diving sites.</p>
+            <a href="palawan.html" class="btn" id="palawan">Read More</a>
+         </div>
+      </div>
+      <div class="card" id="card4">
+         <img src="pictures/banauerice.jpg" alt="Ifugao">
+         <div class="contents">
+            <h3>Ifugao</h3>
+         </div>
+         <div class="hidden-content">
+            <h3>Ifugao</h3>
+            <p>Often referred to as the "Eighth Wonder of the World," these ancient rice terraces were carved into the mountains by the Ifugao people over 2,000 years ago.</p>
+            <a href="rice.html" class="btn" id="rice">Read More</a>
+         </div>
+      </div>       
+      <div class="card" id="card5">
+         <img src="pictures/mayon.JPG" alt="Albay">
+         <div class="contents">
+            <h3>Albay</h3>
+         </div>
+         <div class="hidden-content">
+            <h3>Albay</h3>
+            <p>Mayon Volcano is renowned for its perfect conical shape and is an active volcano with a rich history of eruptions.</p>
+            <a href="mayon.html" class="btn" id="mayon">Read More</a>
+         </div>
+      </div>       
+      <div class="card" id="card6">
+         <img src="pictures/intramuros.jpg" alt="Intramuros">
+         <div class="contents">
+            <h3>Intramuros</h3>
+         </div>
+         <div class="hidden-content">
+            <h3>Intramuros</h3>
+            <p>Intramuros, also known as the "Walled City," is the oldest district and historic core of Manila. It features Spanish-era fortifications, churches, and museums.</p>
+            <a href="intramuros.html" class="btn" id="intramuros">Read More</a>
+         </div>
+      </div>       
+      <div class="card" id="card7">
+         <img src="pictures/siargao.jpg" alt="Siargao Island">
+         <div class="contents">
+            <h3>Siargao Island</h3>
+         </div>
+         <div class="hidden-content">
+            <h3>Siargao Island</h3>
+            <p>Known as the "Surfing Capital of the Philippines," Siargao offers world-class surfing spots like Cloud 9, stunning beaches, and unique attractions like the Sugba Lagoon and Magpupungko Rock Pools.</p>
+            <a href="siargao.html" class="btn" id="siargao">Read More</a>
+         </div>
+      </div>       
+      <div class="card" id="card8">
+         <img src="pictures/batanes.jpg" alt="Batanes">
+         <div class="contents">
+            <h3>Batanes</h3>
+         </div>
+         <div class="hidden-content">
+            <h3>Batanes</h3>
+            <p>Batanes is renowned for its breathtaking landscapes, rolling hills, dramatic cliffs, and unique stone houses. It offers a serene and picturesque environment distinct from the rest of the Philippines.</p>
+            <a href="batanes.html" class="btn" id="batanes">Read More</a>
+         </div>
+      </div>          
+   </div>
+         
+   <script>
+      window.addEventListener('scroll', function() {
+          const header = document.querySelector('.header');
+          const bottomNav = document.querySelector('.bottom-nav');
+          
+          if (window.scrollY > 0) {
+              header.style.background = 'rgba(36, 92, 136, 1)'; // Change to full opacity
+              bottomNav.style.background = 'rgba(58, 125, 169, 1)'; // Change to full opacity
+          } else {
+              header.style.background = 'rgba(255, 255, 255, 0)'; // Transparent background
+              bottomNav.style.background = 'rgba(128, 200, 188, 0)'; // Transparent background
+          }
+      });
+  </script>
+    
+    
+</body>
+</html>

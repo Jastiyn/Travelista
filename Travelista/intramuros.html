@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travelista</title>
+    <link rel="stylesheet" href="intramuros.css">
+    <link rel="icon" href="pictures/plain logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+</head>
+<body>
+   <div class="header">
+      <div class="logo">
+          <a href="home.html">
+              <img src="pictures/logo.png" class="logoImg" alt="Travelista">
+          </a>
+      </div>
+      <div class="topnav">
+          <ul>
+              <li><a href="home.html">Home</a></li>
+              <li><a href="about.html">About Us</a></li>
+              <li><a href="contact.html">Contact</a></li>
+          </ul>
+      </div>
+   </div>
+   <div class="bottom-nav">
+      <ul>
+         <li><a id="explore" href="explore.html">Explore Top Destination</a></li>
+         <li><a id="airfare" href="airfare.html">Airfare</a></li>
+         <li><a id="hotel" href="hotel.html">Hotels</a></li>
+         <li><a id="transport" href="transport.html">Transportation</a></li>
+         <li><a id="packages" href="packages.html">Packages</a></li>
+     </ul>
+   </div>
+   </div>
+   <section class="slider-container">
+      <div class="slider-images">
+         <div class="slider-img">
+            <img src="pictures/fort santiago.jpg" alt="1" class="thumbnail">
+            <img src="pictures/fort santiago 2.jpg" alt="1" class="gif" style="opacity:100%">
+            <h1 class="one">FORT</h1>
+            <div class="details">
+               <h2>Fort santiago</h2>
+               <p>A citadel built by Spanish conquistador Miguel López de Legazpi; it served as a defense fortress and now houses the Rizal Shrine Museum.</p>
+            </div>
+         </div>
+         <div class="slider-img">
+            <img src="pictures/san agustin church and museum.jpg" alt="1" class="thumbnail">
+            <img src="pictures/san agustin church and museum 2.jpg" alt="1" class="gif" style="opacity:100%">
+            <h1 class="two">CHURCH</h1>
+            <div class="details">
+               <h2>San agustin church and museum</h2>
+               <p>The oldest stone church in the Philippines, a UNESCO World Heritage site, featuring a museum with religious artifacts and colonial-era treasures.</p>
+            </div>
+         </div>
+         <div class="slider-img">
+            <img src="pictures/plaza de roma.jpg" alt="1" class="thumbnail">
+            <img src="pictures/plaza de roma 2.jpg" alt="1" class="gif" style="opacity:100%">
+            <h1 class="three">Plaza</h1>
+            <div class="details">
+               <h2>Plaza de roma</h2>
+               <p>A central public square in Intramuros, historically used for civic events and surrounded by significant landmarks like Manila Cathedral.</p>
+            </div>
+         </div>
+         <div class="slider-img">
+            <img src="pictures/casa manila museum.jpg" alt="1" class="thumbnail">
+            <img src="pictures/casa manila museum 2.jpg" alt="1" class="gif" style="opacity:100%">
+            <h1 class="four">Casa</h1>
+            <div class="details">
+               <h2>Casa manila museum</h2>
+               <p>A reconstructed 19th-century Spanish colonial house showcasing period furniture, decor, and lifestyle of the colonial elite.</p>
+            </div>
+         </div>
+         <div class="slider-img">
+            <img src="pictures/puerta real gardens.jpg" alt="1" class="thumbnail">
+            <img src="pictures/puerta real gardens 2.jpeg" alt="1" class="gif" style="opacity:100%">
+            <h1 class="five">garden</h1>
+            <div class="details">
+               <h2>Puerta real gardens</h2>
+               <p>A beautiful garden area used for events and recreation, offering a serene escape within the historic walls of Intramuros.</p>
+            </div>
+         </div>
+         <div class="slider-img">
+            <img src="pictures/bahay tsinoy.jpg" alt="1" class="thumbnail">
+            <img src="pictures/bahay tsinoy 2.jpg" alt="1" class="gif" style="opacity:100%">
+            <h1 class="six">Bahay</h1>
+            <div class="details">
+               <h2>Bahay tsinoy</h2>
+               <p>A museum dedicated to the history and contributions of the Chinese community in the Philippines, featuring exhibits on Chinese-Filipino heritage.</p>
+            </div>
+         </div>
+         <div class="slider-img">
+             <img src="pictures/baluartillo de san fransico javier.jpg" alt="1" class="thumbnail">
+             <img src="pictures/baluartillo de san fransico javier 2.jpg" alt="1" class="gif" style="opacity:100%">
+             <h1 class="seven">Baluartillo</h1>
+             <div class="details">
+               <h2>Baluartillo de san francisco javier</h2>
+               <p>A fortified structure that was part of the defense system of Intramuros, now an interesting historical site for visitors.</p>
+            </div>
+         </div>
+         <div class="slider-img">
+            <img src="pictures/rizal shrine museum.jpeg" alt="1" class="thumbnail">
+            <img src="pictures/rizal shrine museum 2.jpg" alt="1" class="gif" style="opacity:100%">
+            <h1 class="eight">museum</h1>
+            <div class="details">
+               <h2>Rizal shrine museum</h2>
+               <p>Located within Fort Santiago, this museum is dedicated to the life and works of the Philippine national hero, Dr. José Rizal.</p>
+            </div>
+         </div>
+      </div>
+   </section>
+   <div class="back-container">
+      <a href="explore.html" class="back">Back</a>
+   </div>
+   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+   <script>
+      $(document).ready(function () {
+         $(".slider-img").on("click", function () {
+         $(".slider-img").removeClass("active");
+         $(this).addClass("active");
+         });
+      });
+   </script>
+      <style>
+         .gif {
+         display: none;
+         }
+         .active .gif {
+         display: block;
+         }
+         .active .thumbnail {
+         display: none;
+         }
+      </style>           
+   <script>
+      window.addEventListener('scroll', function() {
+          const header = document.querySelector('.header');
+          const bottomNav = document.querySelector('.bottom-nav');
+          
+          if (window.scrollY > 0) {
+              header.style.background = 'rgba(36, 92, 136, 1)'; // Change to full opacity
+              bottomNav.style.background = 'rgba(58, 125, 169, 1)'; // Change to full opacity
+          } else {
+              header.style.background = 'rgba(255, 255, 255, 0)'; // Transparent background
+              bottomNav.style.background = 'rgba(128, 200, 188, 0)'; // Transparent background
+          }
+      });
+  </script>
+    
+    
+</body>
+</html>

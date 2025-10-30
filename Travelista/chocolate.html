@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travelista</title>
+    <link rel="stylesheet" href="chocolate.css">
+    <link rel="icon" href="pictures/plain logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+</head>
+<body>
+   <div class="header">
+      <div class="logo">
+          <a href="home.html">
+              <img src="pictures/logo.png" class="logoImg" alt="Travelista">
+          </a>
+      </div>
+      <div class="topnav">
+          <ul>
+              <li><a href="home.html">Home</a></li>
+              <li><a href="about.html">About Us</a></li>
+              <li><a href="contact.html">Contact</a></li>
+          </ul>
+      </div>
+   </div>
+   <div class="bottom-nav">
+      <ul>
+         <li><a id="explore" href="explore.html">Explore Top Destination</a></li>
+         <li><a id="airfare" href="airfare.html">Airfare</a></li>
+         <li><a id="hotel" href="hotel.html">Hotels</a></li>
+         <li><a id="transport" href="transport.html">Transportation</a></li>
+         <li><a id="packages" href="packages.html">Packages</a></li>
+     </ul>
+   </div>
+   </div>
+   <section class="slider-container">
+      <div class="slider-images">
+         <div class="slider-img">
+            <img src="pictures/chocolate hills.jpg" alt="1" class="thumbnail">
+            <img src="pictures/chocolate hills 2.jpg" alt="1" class="gif" style="opacity:100%">
+            <h1 class="one">CHOCOLATE</h1>
+            <div class="details">
+               <h2>CHOCOLATE HILLS COMPLEX</h2>
+               <p>A viewpoint to admire Bohol’s famous Chocolate Hills, with over 1,200 cone-shaped hills.</p>
+            </div>
+         </div>
+         <div class="slider-img">
+            <img src="pictures/tarsier conservation area.jpg" alt="1" class="thumbnail">
+            <img src="pictures/tarsier conservation area 2.jpg" alt="1" class="gif" style="opacity:100%">
+            <h1 class="two">TARSIER</h1>
+            <div class="details">
+               <h2>TARSIER CONSERVATION AREA</h2>
+               <p>Sanctuary for the tiny tarsier, one of the world's smallest primates, in a natural habitat.</p>
+            </div>
+         </div>
+         <div class="slider-img">
+            <img src="pictures/man-made forest.jpg" alt="1" class="thumbnail">
+            <img src="pictures/man-made forest 2.jpg" alt="1" class="gif" style="opacity:100%">
+            <h1 class="three">FOREST</h1>
+            <div class="details">
+               <h2>MAN-MADE FOREST</h2>
+               <p>A picturesque, dense forest of mahogany trees planted in the 1960s along the highway.</p>
+            </div>
+         </div>
+         <div class="slider-img">
+            <img src="pictures/bohol hanging bridge.jpg" alt="1" class="thumbnail">
+            <img src="pictures/bohol hanging bridge 2.jpg" alt="1" class="gif" style="opacity:100%">
+            <h1 class="four">BRIDGE</h1>
+            <div class="details">
+               <h2>Bohol Hanging Bridge</h2>
+               <p>A thrilling bamboo suspension bridge over the Loboc River offering stunning views.</p>
+            </div>
+         </div>
+         <div class="slider-img">
+            <img src="pictures/bohol habitat conservation center.webp" alt="1" class="thumbnail">
+            <img src="pictures/bohol habitat conservation center.webp" alt="1" class="gif" style="opacity:100%">
+            <h1 class="five">HABITAT</h1>
+            <div class="details">
+               <h2>Bohol Habitat Conservation Center</h2>
+               <p>A center dedicated to preserving Bohol's flora and fauna, including a butterfly garden.</p>
+            </div>
+         </div>
+         <div class="slider-img">
+            <img src="pictures/baclayon church.jpg" alt="1" class="thumbnail">
+            <img src="pictures/baclayon church 2.jpg" alt="1" class="gif" style="opacity:100%">
+            <h1 class="six">CHURCH</h1>
+            <div class="details">
+               <h2>Baclayon Church</h2>
+               <p>One of the oldest churches in the Philippines, built in the 16th century, featuring colonial architecture.</p>
+            </div>
+         </div>
+         <div class="slider-img">
+             <img src="pictures/sagbayan peak.jpg" alt="1" class="thumbnail">
+             <img src="pictures/sagbayan peak 3.jpg" alt="1" class="gif" style="opacity:100%">
+             <h1 class="seven">SAGBAYAN</h1>
+             <div class="details">
+               <h2>Sagbayan Peak</h2>
+               <p>A hilltop park with panoramic views of the Chocolate Hills and nearby islands.</p>
+            </div>
+         </div>
+         <div class="slider-img">
+            <img src="pictures/loboc river cruise.jpg" alt="1" class="thumbnail">
+            <img src="pictures/loboc river cruise 2.jpg" alt="1" class="gif" style="opacity:100%">
+            <h1 class="eight">RIVER</h1>
+            <div class="details">
+               <h2>Loboc River Cruise</h2>
+               <p>A scenic river cruise offering local cuisine and cultural performances amidst lush surroundings.</p>
+            </div>
+         </div>
+      </div>
+   </section>
+   <div class="back-container">
+      <a href="explore.html" class="back">Back</a>
+   </div>
+   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+   <script>
+      $(document).ready(function () {
+         $(".slider-img").on("click", function () {
+         $(".slider-img").removeClass("active");
+         $(this).addClass("active");
+         });
+      });
+   </script>
+      <style>
+         .gif {
+         display: none;
+         }
+         .active .gif {
+         display: block;
+         }
+         .active .thumbnail {
+         display: none;
+         }
+      </style>           
+   <script>
+      window.addEventListener('scroll', function() {
+          const header = document.querySelector('.header');
+          const bottomNav = document.querySelector('.bottom-nav');
+          
+          if (window.scrollY > 0) {
+              header.style.background = 'rgba(36, 92, 136, 1)'; // Change to full opacity
+              bottomNav.style.background = 'rgba(58, 125, 169, 1)'; // Change to full opacity
+          } else {
+              header.style.background = 'rgba(255, 255, 255, 0)'; // Transparent background
+              bottomNav.style.background = 'rgba(128, 200, 188, 0)'; // Transparent background
+          }
+      });
+  </script>
+    
+    
+</body>
+</html>

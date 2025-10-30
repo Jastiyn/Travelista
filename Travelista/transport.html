@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travelista</title>
+    <link rel="icon" href="pictures/plain logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="transport.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+</head>
+<body>
+    <div class="header">
+        <div class="logo">
+            <a href="home.html">
+                <img src="pictures/logo.png" class="logoImg" alt="Travelista">
+            </a>
+        </div>
+        <div class="topnav">
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="bottom-nav">
+        <ul>
+            <li><a id="explore" href="explore.html">Explore Top Destination</a></li>
+            <li><a id="airfare" href="airfare.html">Airfare</a></li>
+            <li><a id="hotel" href="hotel.html">Hotels</a></li>
+            <li><a id="transport" href="transport.html">Transportation</a></li>
+            <li><a id="packages" href="packages.html">Packages</a></li>
+        </ul>
+    </div>
+
+    <div class="container">
+        <!-- To Edit -->
+        <div class = "card" id = "card1">
+            <img src="pictures/Pick up.png" alt="Pick up">
+            <div class="contents">
+                <h2>Pick-Up</h2>
+                <p>Airport to Hotel</p>
+                <h1>₱-</h1>
+                <a href="transportBook.html" class="btn">Book Now!</a>
+            </div>
+        </div>
+        <div class = "card" id = "card2">
+            <img src="pictures/rental.png" alt="Tour">
+            <div class="contents">
+                <h2>Car Rental</h2>
+                <p>Car Rental</p>
+                <h1>₱-</h1>
+                <a href="transportBook.html" class="btn">Book Now!</a>
+            </div>
+        </div>
+        
+        
+    </div>
+    <script>
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('.header');
+            const bottomNav = document.querySelector('.bottom-nav');
+            
+            if (window.scrollY > 0) {
+                header.style.background = 'rgba(36, 92, 136, 1)'; // Change to full opacity
+                bottomNav.style.background = 'rgba(58, 125, 169, 1)'; // Change to full opacity
+            } else {
+                header.style.background = 'rgba(255, 255, 255, 0)'; // Transparent background
+                bottomNav.style.background = 'rgba(128, 200, 188, 0)'; // Transparent background
+            }
+        });
+    </script>
+</body>
+</html>
